@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// 类的封装：数据 + 函数
 class MyVec {
 public:
     MyVec();
@@ -47,5 +48,10 @@ private:
     float* dataPtr;
 };
 
+// 继承 
+class MySuperVector: public MyVec 
+{
+    
+}
 
 #endif //MYVEC_H
