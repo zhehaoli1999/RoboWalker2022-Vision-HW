@@ -30,7 +30,15 @@ bool PowerRuneDetector::operator()(const Mat &inputImg, Point2f& target, Mat& ou
 
     bool isDetected = false;
     // selected possible area containing leaf
-    // TODO： 从轮廓中使用模板匹配的方式检测扇叶
+    /* TODO：你需要实现从轮廓中使用模板匹配的方式检测扇叶的整体流程，需要选择最佳匹配结果
+     *  并将识别到的中心位置放入target返回、识别结果绘制在outImg
+     *  一种可能的流程（有优化空间）：
+     *  1. 遍历所有轮廓
+     *  2. 在遍历过程中抽取出轮廓对应的区域（ROI：感兴趣区域）进行模板匹配（由于有多个模板，模板匹配可能也需要遍历，但可以并行加速（加分项））
+     *  3. 从所有可能区域中通过比较模板匹配的数值（因为我们的测试数据中每次只有一个待击打装甲板），选出最佳区域，
+     *  4. 如果识别到，设置isDetected变量，将识别到的中心位置放入target返回、识别结果绘制在outImg
+     *  5. 如果识别不到，继续下一个轮廓。
+     */
 
     if(showResult) {
         namedWindow("contours", WINDOW_AUTOSIZE);

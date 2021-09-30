@@ -12,7 +12,6 @@ Preprocessor::Preprocessor() {
             Point(morphSize, morphSize));
 }
 
-
 Mat Preprocessor::denoise(const Mat &inputImg, const int binaryFilterThresh, const int binaryFilterMaxVal) {
     // TODO: 你要实现的部分
 }

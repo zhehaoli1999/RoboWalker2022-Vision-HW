@@ -6,7 +6,7 @@
 
 ## 目标
 
-使用OpenCV库提供的传统数字图像处理算法，实现一个简化的能量机关识别器，感受传统算法的效果与局限性。
+使用OpenCV库提供的传统数字图像处理算法，实现一个简化的能量机关识别器，识别出输入图片中未点亮的、需要我们击打的扇叶，感受传统算法的效果与局限性。
 
 你需要修改的C++类有``PowerRuneDetector``与``Preprocessor``。
 
@@ -39,7 +39,7 @@
 作业中已经写好可以直接使用/参考/加以修改的函数有：
 
 1. ``float PowerRuneDetector::getTemplateMatchVal(const Mat& roi, const Mat& templ, Point2f& matchCenter, const int method) `` 对感兴趣区域（ROI：**R**egion **O**f **I**nterest）根据传入的``templ``模板进行匹配，并返回匹配的数值。
-2. ``Mat PowerRuneDetector::perspectiveTransform(const RotatedRect& rect, const Mat& inputImg, const bool showResult)``将旋转矩形``rect``所在的（可能与坐标轴有夹角的）图像区域提取为平行于坐标轴的矩形图像。
+2. ``Mat PowerRuneDetector::perspectiveTransform(const RotatedRect& rect, const Mat& inputImg, const bool showResult)``矩形视角变换，将旋转矩形``rect``所在的（可能与坐标轴有夹角的）图像区域提取为平行于坐标轴的（和模板图片方向一致的）矩形图像，用于模板匹配
 3. 重载了运算符``()``，原理同``Preprocessor``。
 
 
