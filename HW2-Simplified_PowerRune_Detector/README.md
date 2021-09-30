@@ -20,7 +20,7 @@
 
 ### 能量机关扇叶识别部分
 1. ``void findContours(InputArray image, OutputArrayOfArrays contours, OutputArray hierarchy, int mode, int method, Point_<int> offset = Point())``查找图片中的轮廓
-2. 
+2. TODO soon！
 
 
 ## 代码目录结构
@@ -69,6 +69,6 @@
 <img src="./imgs/1912-output.jpg" style="zoom:50%;" />
 
 
-
+TODO 更多细节待完善
 
 

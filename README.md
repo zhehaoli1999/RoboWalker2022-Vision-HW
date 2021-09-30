@@ -1,4 +1,4 @@
-# USTC RoboWalker战队 视觉组2022练习作业
+# USTC RoboWalker战队 视觉组2022练习作业
 
 > “极限犹可突破，至臻亦不可止。”
 
