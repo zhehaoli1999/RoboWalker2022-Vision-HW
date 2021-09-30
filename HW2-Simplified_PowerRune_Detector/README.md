@@ -10,17 +10,39 @@
 
 你需要修改的C++类有``PowerRuneDetector``与``Preprocessor``。
 
+### 预处理部分
+
 你可能用到的OpenCV函数有：（具体使用用法可以自行查阅文档：[OpenCV 4.5.0 doc](https://docs.opencv.org/4.5.0/)）
 
-### 预处理部分
 1. ``void split(InputArray m, OutputArrayOfArrays mv)`` 用于分离以``Mat``存储的图片的颜色通道
 2. ``double threshold(InputArray src, OutputArray dst, double thresh, double maxval, int type) `` 用于对图像像素进行二值化
 3. ``void morphologyEx(InputArray src, OutputArray dst, int op, InputArray kernel, Point_<int> anchor = Point(-1, -1), int iterations = 1, int borderType = BORDER_CONSTANT, const Scalar_<double> &borderValue = morphologyDefaultBorderValue())``
     对图像进行形态学处理以去噪
 
+作业中已经写好可以直接使用/参考/加以修改的函数有：
+
+1. `Mat Preprocessor::operator()(const Mat &inputImg) `重载了``Preprocessor``类的``()``运算符，使得在``main``函数中的调用可以简化为：
+
+    ```c++
+     auto preprocess = Preprocessor();
+     auto midImg = preprocess(img);
+    ```
+
+    
+
 ### 能量机关扇叶识别部分
+
+你可能用到的OpenCV函数有：
+
 1. ``void findContours(InputArray image, OutputArrayOfArrays contours, OutputArray hierarchy, int mode, int method, Point_<int> offset = Point())``查找图片中的轮廓
-2. TODO soon！
+
+作业中已经写好可以直接使用/参考/加以修改的函数有：
+
+1. ``float PowerRuneDetector::getTemplateMatchVal(const Mat& roi, const Mat& templ, Point2f& matchCenter, const int method) `` 对感兴趣区域（ROI：**R**egion **O**f **I**nterest）根据传入的``templ``模板进行匹配，并返回匹配的数值。
+2. ``Mat PowerRuneDetector::perspectiveTransform(const RotatedRect& rect, const Mat& inputImg, const bool showResult)``将旋转矩形``rect``所在的（可能与坐标轴有夹角的）图像区域提取为平行于坐标轴的矩形图像。
+3. 重载了运算符``()``，原理同``Preprocessor``。
+
+
 
 
 ## 代码目录结构
@@ -69,6 +91,14 @@
 <img src="./imgs/1912-output.jpg" style="zoom:50%;" />
 
 
-TODO 更多细节待完善
 
+## 提示 & 相关知识
 
+1. 我们的输入数据中能量机关是红色的，可以利用这个信息筛选颜色通道。对于场地中白色光点的滤除，一种常用的方式是：用红色颜色通道减去蓝色颜色通道。
+
+    下图展示了红色通道减去蓝色通道后得到的单通道图片的结果。
+
+    ![](./imgs/1-1813_red-blue.png)
+
+2. 形态学变换：形态学闭运算可以填充图像中的空洞，形态学开运算可以断开图像中细小的连接（相关的图像处理方式还有顶帽与底帽变换），可以自行搜索并加以使用，提高图像去噪的效果。
+3. 展示图片的方法已经写好提供给大家，可以在debug时参考并加以使用。在图片上绘制图形的相关函数有自己写的``drawRotatedRect``、OpenCV提供的``drawContours``等。
