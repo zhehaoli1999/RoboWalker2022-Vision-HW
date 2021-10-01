@@ -48,10 +48,4 @@ private:
     float* dataPtr;
 };
 
-// 继承 
-class MySuperVector: public MyVec 
-{
-    
-}
-
 #endif //MYVEC_H
