@@ -6,7 +6,14 @@
 
 ## 作业列表
 
+### 0. 编程基础教程 [Hello World](./HW0-Hello_World)
+
+针对没有学过C++/Python、没有太多相关编程经验的新同学的C++ & Python编程入门教程。
+
+
+
 ### 1. C++基础练习 [Custom Vector](./HW1-Custom_Vector)
+
 实现一个简化版的std::vector
 
 
