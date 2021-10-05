@@ -191,7 +191,7 @@ g++ HelloWorld -o run_this
 请使用Python的可交互命令行环境（被称为REPL（Read–Eval–Print Loop 读取-求值-打印循环））尝试
 ``print("HelloWorld")``。体验Python作为解释型动态语言相比于C++的不同。 
 
-**目标：**使用Python的REPL环境，打印一句问候语。并可以自由学习下面“相关文章推荐”。
+**目标：** 使用Python的REPL环境，打印一句问候语。并可以自由学习下面“相关文章推荐”。
 
 **相关文章推荐：**
 1. [菜鸟教程 python3](https://www.runoob.com/python3/python3-tutorial.html)
