@@ -17,6 +17,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 # 输出项目源文件所在的目录
 message(STATUS "Project source dir: ${PROJECT_SOURCE_DIR}/")
 
+# 下面两条指令用于将二进制文件输出到指定目录
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+# 将生成的二进制文件放在源文件所在的目录
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}) 
+
 # 查找后缀为.cpp的源文件，并打印出来找到的内容
 FILE(GLOB_RECURSE SOURCE "Detector/*.cpp" "Preprocessor/*.cpp" "Utils/*.cpp")
 message(STATUS "Source files: ${SOURCE}")

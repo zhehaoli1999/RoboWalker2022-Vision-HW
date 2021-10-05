@@ -84,6 +84,8 @@ ostream& operator<<(ostream& out, const MyVec& mv)
 int MyVec::capacity() const { return nCapacity;}
 
 bool MyVec::allocateMoreMem() {
+    if(nCapacity == 0)
+        nCapacity = 5; 
     nCapacity *= 2;
     float *newDataPtr = new float[nCapacity];
     if(newDataPtr == nullptr)
