@@ -91,6 +91,8 @@
 <img src="./imgs/1912-output.jpg" style="zoom:50%;" />
 
 ## OpenCV 环境配置
+
+OpenCV版本使用4.5.0及以上即可。
 1. Mac和linux上可以使用包管理器下载相关lib与头文件
 2. Windows上：请自行搜索，有好的教程可以提pull request贡献至本文档
 3. 有问题可以在视觉组群内讨论
