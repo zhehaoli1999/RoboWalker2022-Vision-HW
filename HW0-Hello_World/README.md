@@ -13,20 +13,21 @@ print("Hello World from Python!")
 
 ## 目标
 在本次作业中，你将学习到：
-1. 什么是编译型语言（以C++为例） & 解释型语言（以Python为例）
 
-2. 如何编译运行你的第一个C++程序：Hello World!
+1. <span id="jump1">什么是编译型语言（以C++为例） & 解释型语言（以Python为例）</span>
 
-3. 开始编写你的第一个C++类：Animals
+2. <span id="jump2">如何编译运行你的第一个C++程序：Hello World!</span>
 
-4. STL库初体验：使用STL标准库实现一个动物园类
+3. <span id="jump3">开始编写你的第一个C++类：Animals</span>
 
-5. 解释型语言Python初体验
+4. <span id="jump4">STL库初体验：使用STL标准库实现一个动物园类</span>
+
+5. <span id="jump5">解释型语言Python初体验</span>
 
 下面让我们开始吧！👇 
 
 
-### 1. 什么是编译型语言（以C与C++为例） & 解释型语言（以Python为例）
+### [1. 什么是编译型语言（以C与C++为例） & 解释型语言（以Python为例](#jump1)
 
 
 计算机底层执行的是01101这样的二进制码（被称为机器语言，Byte Code），但机器语言阅读起来十分困难。
@@ -55,8 +56,9 @@ C与C++是编译型语言，其运行前需要使用编译器编译代码，而P
 
 1.  [解释型语言和编译型语言的区别](https://chinese.freecodecamp.org/news/compiled-versus-interpreted-languages/)（[英文原文](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/)）
 
+<br/>
 
-### 2. 如何编译运行你的第一个C++程序：Hello World!
+### [2. 如何编译运行你的第一个C++程序：Hello World!](#jump2)
 
 C++是C语言的升级版，增加了面向对象编程等特性，并提高了计算机资源如内存管理的安全性。
 
@@ -97,8 +99,9 @@ g++ HelloWorld -o run_this
 **相关文章推荐：**
 1. [C++的分步编译](https://hackingcpp.com/cpp/lang/separate_compilation.html)
 
+<br/>
 
-### 3. 开始编写你的第一个C++类：Animals
+### [3. 开始编写你的第一个C++类：Animals](#jump3)
 
 接下来让我们开始初步了解一下C++的面向对象编程方法。我们使用到的文件有``main.cpp``,``Animals.h``,``Animals.cpp``。
 
@@ -110,9 +113,9 @@ g++ HelloWorld -o run_this
 
 **参考资料：**
 
-1.[菜鸟教程：c++继承](https://www.runoob.com/cplusplus/cpp-inheritance.html)
+1. [菜鸟教程：c++继承](https://www.runoob.com/cplusplus/cpp-inheritance.html)
 
-2.[菜鸟教程：c++多态、虚函数、纯虚函数](https://www.runoob.com/cplusplus/cpp-polymorphism.html)
+2. [菜鸟教程：c++多态、虚函数、纯虚函数](https://www.runoob.com/cplusplus/cpp-polymorphism.html)
 
 3. [菜鸟教程：构造函数成员初始化列表](https://www.runoob.com/w3cnote/cpp-construct-function-initial-list.html)
 
@@ -141,7 +144,9 @@ g++ HelloWorld -o run_this
 
 **目标：** 请运行编译结果，观察结果，并自由修改。
 
-### 4. STL库初体验：使用STL标准库中的数组实现一个动物园类
+<br/>
+
+### [4. STL库初体验：使用STL标准库中的数组实现一个动物园类](#jump4)
 
 我们使用``std::vector``实现一个动物园类。具体代码请看``zoo.cpp``。
 
@@ -178,7 +183,9 @@ g++ HelloWorld -o run_this
 
 **目标：** 请运行zoo.cpp，观察结果，并自由修改。
 
-### 5. 解释型语言Python初体验
+<br/>
+
+### [5. 解释型语言Python初体验](#jump5)
 
 请前往[python官方网站](https://www.python.org/)下载最新版python
 
