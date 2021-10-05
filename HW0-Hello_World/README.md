@@ -88,7 +88,7 @@ C++是C语言的升级版，增加了面向对象编程等特性，并提高了�
 
 #### 方法2. 使用命令行 
 ```
-g++ HelloWorld -o run_this 
+g++ HelloWorld.cpp -o run_this 
 ```
 其中`-o`参数后面跟着的是最终生成的可执行文件的名字。然后我们可以执行它，看看结果如何！
 ```
@@ -181,6 +181,28 @@ g++ HelloWorld -o run_this
     最后执行可执行文件即可。
 
 **目标：** 请运行zoo.cpp，观察结果，并自由修改。
+
+附：正确的运行结果
+```s
+Amy says: meow~
+
+Bob says: vov! vov!
+
+Tom says: baa~~~
+
+Mary says: moo~~~
+
+Nick says:  Ring-ding-ding-ding-dingeringeding!
+            Gering-ding-ding-ding-dingeringeding!
+            Wa-pa-pa-pa-pa-pa-pow!
+            Hatee-hatee-hatee-ho!
+            Joff-tchoff-tchoffo-tchoffo-tchoff!
+            Jacha-chacha-chacha-chow!
+            Fraka-kaka-kaka-kaka-kow!
+            A-hee-ahee ha-hee!
+            A-oo-oo-oo-ooo!
+
+```
 
 <br/>
 
