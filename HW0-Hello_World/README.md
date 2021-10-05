@@ -1,4 +1,5 @@
 # RoboWalker2022视觉组第0次作业
+出题人：李喆昊（QQ：1003449832）
 
 ```c++
 #include <iostream>
@@ -18,11 +19,12 @@ print("Hello World from Python!")
 
 3. 开始编写你的第一个C++类：Animals
 
-4. STL库初体验：使用STL标准库实现你的向量和矩阵
+4. STL库初体验：使用STL标准库实现一个动物园类
 
 5. 解释型语言Python初体验
 
 下面让我们开始吧！👇 
+
 
 ### 1. 什么是编译型语言（以C与C++为例） & 解释型语言（以Python为例）
 
@@ -39,6 +41,7 @@ print("Hello World from Python!")
 但高级语言最后仍然需要转换为二进制码被机器使用，如下图所示。视转换过程的不同可以将转换的工具分为“编译器”(Compiler)与“解释器”(Interpretor)。
 
 ![](./imgs/img1.png)
+
 (图片来源于网络，[链接](https://www.tutorialandexample.com/machine-instructions/))
 
 
@@ -94,20 +97,26 @@ g++ HelloWorld -o run_this
 **相关文章推荐：**
 1. [C++的分步编译](https://hackingcpp.com/cpp/lang/separate_compilation.html)
 
+
 ### 3. 开始编写你的第一个C++类：Animals
 
 接下来让我们开始初步了解一下C++的面向对象编程方法。我们使用到的文件有``main.cpp``,``Animals.h``,``Animals.cpp``。
 
 这里，我们声明了一个``Animal``基类，让``Dog, Cat, Sheep, Cow, Fox``类都继承自这个基类。
+
 我们用到的C++类的知识点有：继承、多态、纯虚函数、构造函数成员初始化列表。
+
 请阅读下面的参考资料对这些知识点进行学习。
 
-参考资料：
+**参考资料：**
+
 1.[菜鸟教程：c++继承](https://www.runoob.com/cplusplus/cpp-inheritance.html)
+
 2.[菜鸟教程：c++多态、虚函数、纯虚函数](https://www.runoob.com/cplusplus/cpp-polymorphism.html)
+
 3. [菜鸟教程：构造函数成员初始化列表](https://www.runoob.com/w3cnote/cpp-construct-function-initial-list.html)
 
-运行方法：
+**运行方法：**
 1. g++ 
 
     ``g++ main.cpp Animals.cpp -o run_this``然后执行``run_this``
@@ -117,7 +126,7 @@ g++ HelloWorld -o run_this
     但需要注意的是，我们这里有多个cpp文件，需要修改一下配置文件``tasks.json``，点击下图圈出位置：
     ![](./imgs/img3.png)
     做如下修改
-    ```
+    ```shell
     "args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -130,30 +139,23 @@ g++ HelloWorld -o run_this
     然后，在打开``main.cpp``的界面下，执行vscode的“运行生成任务”，即可得到名为“main”的可执行文件。
     最后执行可执行文件即可。
 
-**目标：**请运行编译结果，观察结果，并自由修改。
+**目标：** 请运行编译结果，观察结果，并自由修改。
 
 ### 4. STL库初体验：使用STL标准库中的数组实现一个动物园类
 
 我们使用``std::vector``实现一个动物园类。具体代码请看``zoo.cpp``。
+
 用到的知识点：``std::vector``的初始化与增加元素的``push_back``函数、类的运行时多态。
+
 请阅读下面的参考资料对这些知识点进行学习。
 
-参考资料：
+**参考资料：**
+
 1. [C++编译期多态与运行期多态](https://www.cnblogs.com/QG-whz/p/5132745.html)
+
 2. [菜鸟教程 STL vector](https://www.runoob.com/cplusplus/cpp-stl-tutorial.html)
 
-
-下面一段文字摘自[菜鸟教程：c++多态、虚函数、纯虚函数](https://www.runoob.com/cplusplus/cpp-polymorphism.html)的评论。
->C++多态意味着调用成员函数时，会根据调用函数的对象的类型来执行不同的函数
->形成多态必须具备三个条件：
-
->1、必须存在继承关系；
-
->2、继承关系必须有同名虚函数（其中虚函数是在基类中使用关键字Virtual声明的函数，在派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数）；
-
->3、存在基类类型的指针或者引用，通过该指针或引用调用虚函数；
-
-运行方式：
+**运行方式：**
 1. g++ 
 
     ``g++ zoo.cpp Animals.cpp -o run_this``然后执行``run_this``
@@ -161,7 +163,7 @@ g++ HelloWorld -o run_this
 2. vscode
     同第四节。
     配置文件做如下修改
-    ```
+    ```shell
     "args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -174,7 +176,7 @@ g++ HelloWorld -o run_this
     然后，在打开``zoo.cpp``的界面下，执行vscode的“运行生成任务”，即可得到名为“zoo”的可执行文件。
     最后执行可执行文件即可。
 
-**目标：**请运行zoo.cpp，观察结果，并自由修改。
+**目标：** 请运行zoo.cpp，观察结果，并自由修改。
 
 ### 5. 解释型语言Python初体验
 
