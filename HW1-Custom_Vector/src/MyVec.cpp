@@ -13,35 +13,68 @@ MyVec::MyVec(int n) : nSize(n), nCapacity(n + 10), dataPtr(nullptr) {
         dataPtr[i] = 0.;
 }
 
-MyVec::MyVec(int n, const float t){
-    //TODO: 在这里插入你的实现，成员变量的初始化可以使用如MyVec(int n)的初始化列表
+MyVec::MyVec(int n, const float t) : MyVec(n){
+    for(int i = 0; i < n; i++)
+        dataPtr[i] = t;
 }
 
 MyVec::MyVec(const MyVec &anotherMyVec): nSize(anotherMyVec.size()), nCapacity(anotherMyVec.capacity()) {
-    //TODO: 在这里插入你的实现
+    dataPtr = new float[nCapacity];
+    for (int i = 0; i < nSize; i++)
+        dataPtr[i] = anotherMyVec.dataPtr[i];
 }
 
 // 插入数据部分
 void MyVec::push_back(const float x) {
-    //TODO: 在这里插入你的实现，注意dataPtr为nullptr的情况
+    if (dataPtr == nullptr)
+        allocateMoreMem();
+    if (nSize == nCapacity)
+        allocateMoreMem();
+    dataPtr[nSize++] = x;
 }
 
 int MyVec::insert(const int idx, const float x) {
-    //TODO: 在这里插入你的实现，注意异常参数的处理
+    if (!dataPtr)
+        allocateMoreMem();
+    if (nSize == nCapacity)
+        allocateMoreMem();
+    for (int i = nSize++; i > idx; i--)
+        dataPtr[i] = dataPtr[i - 1];
+    dataPtr[idx] = x;
+    return idx;
 }
 
 
 // 删除数据部分
 int MyVec::erase(const int idx) {
-    //TODO: 在这里插入你的实现，注意异常参数的处理
+    if (dataPtr == nullptr)
+        throw "vector not initiate";
+    if (idx >= nSize)
+        throw "out of range";
+    for (int i = idx; i < nSize - 1; i++)
+        dataPtr[i] = dataPtr[i + 1];
+    nSize--;
+    return idx;
 }
 
 int MyVec::erase(const int first, const int last) {
-    //TODO: 在这里插入你的实现，注意异常参数的处理
+    // first include, last exclude, so "last" is allowed to be equal to nSize
+    if (dataPtr == nullptr)
+        throw "vector not initiate";
+    if (last > nSize || first >= nSize)
+        throw "out of range";
+    int len = last - first;
+    for (int i = first; i < nSize - len; i++)
+        dataPtr[i] = dataPtr[i + len];
+    nSize = nSize - len;
+    return len;
 }
 
 void MyVec::clear() {
-    //TODO: 在这里插入你的实现
+    free(dataPtr);
+    nSize = 0;
+    nCapacity = 0;
+    dataPtr = nullptr;
 }
 
 // 其他已实现的函数，可做参考
