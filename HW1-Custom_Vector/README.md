@@ -20,12 +20,12 @@
 
 ### 二. 插入数据部分
 1. ``void push_back(const float x)`` 向末尾增加一个元素x
-2. ``int insert(const int idx, const float x)`` 在下标为idx的元素前增加元素x，返回x的下标
+2. ``int insert(const int idx, const float x)`` 在下标为idx（从0开始）的元素前增加元素x，返回x的下标
 
 ### 三. 删除数据部分
-1. ``int erase(const int idx)`` 删除下标为idx的函数（注意错误处理）返回后一个元素的下标，如果后一个元素不在向量里，返回-1
+1. ``int erase(const int idx)`` 删除下标为idx（从0开始）的函数（注意错误处理）返回后一个元素的下标，如果后一个元素不在向量里，返回-1 
 
-2. ``int erase(const int first, const int last)`` 删除向量中[first,last)中元素，返回后一个元素的下标，如果后一个元素不在向量里，返回-1
+2. ``int erase(const int first, const int last)`` 删除向量中[first,last)中元素，返回后一个元素的下标，如果后一个元素不在向量里，返回-1。first可以=last，last可以等于向量的长度。
 
 3. ``void clear()`` 清空向量中所有元素
 
