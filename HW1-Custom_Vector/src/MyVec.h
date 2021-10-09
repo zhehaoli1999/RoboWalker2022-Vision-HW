@@ -53,7 +53,7 @@ public:
     friend ostream& operator<<(ostream&, const MyVec&);  // 用于cout输出
 
 private:
-    bool allocateMoreMem(); // 成倍分配新内存
+    void allocateMoreMem(); // 成倍分配新内存
 
     int nSize;
     int nCapacity;

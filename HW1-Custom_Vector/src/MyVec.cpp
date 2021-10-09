@@ -83,7 +83,7 @@ ostream& operator<<(ostream& out, const MyVec& mv)
 
 int MyVec::capacity() const { return nCapacity;}
 
-bool MyVec::allocateMoreMem() {
+void MyVec::allocateMoreMem() {
     if(nCapacity == 0)
         nCapacity = 5; 
     nCapacity *= 2;
@@ -91,8 +91,11 @@ bool MyVec::allocateMoreMem() {
     if(newDataPtr == nullptr)
         throw "No more memory available!";
     else {
-        memcpy(newDataPtr, dataPtr, nSize * sizeof(float));
-        delete[] dataPtr;
+        if(dataPtr != nullptr)
+        {
+            memcpy(newDataPtr, dataPtr, nSize * sizeof(float));
+            delete[] dataPtr;
+        }
         dataPtr = newDataPtr;
     }
 }
