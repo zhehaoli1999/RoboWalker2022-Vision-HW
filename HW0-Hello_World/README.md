@@ -81,7 +81,7 @@ C++是C语言的升级版，增加了面向对象编程等特性，并提高了�
 
 请遵循上面资料中的步骤完成：
 1. 安装vscode C/C++ 扩展
-2. 安装适合你的平台的编译器（Mac与Linux自带了编译器，Windows可以安装MinGW-x64）
+2. 安装适合你的平台的编译器（Mac与Linux自带了编译器，Windows可以安装mingw-x64）
 3. 确认编译器已经成功安装
 
 最后，编译运行[``HelloWorld.cpp``](./HelloWorld.cpp)，查看结果。
@@ -119,11 +119,12 @@ g++ HelloWorld.cpp -o run_this
 3. [菜鸟教程：构造函数成员初始化列表](https://www.runoob.com/w3cnote/cpp-construct-function-initial-list.html)
 
 **运行方法：**
-1. g++ 
+1. 命令行中使用g++ 
 
     ``g++ main.cpp Animals.cpp -o run_this``然后执行``run_this``
 
-2. vscode
+2. 使用vscode
+   
     同参考资料[C/C++ for Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp)中的编译步骤，
     但需要注意的是，我们这里有多个cpp文件，需要修改一下配置文件``tasks.json``，点击下图圈出位置：
     ![](./imgs/img3.png)
@@ -160,11 +161,12 @@ g++ HelloWorld.cpp -o run_this
 2. [菜鸟教程 STL vector](https://www.runoob.com/cplusplus/cpp-stl-tutorial.html)
 
 **运行方式：**
-1. g++ 
+1. 命令行中使用g++ 
 
     ``g++ zoo.cpp Animals.cpp -o run_this``然后执行``run_this``
 
-2. vscode
+2. 使用vscode
+   
     同第四节。
     配置文件做如下修改
     ```shell
