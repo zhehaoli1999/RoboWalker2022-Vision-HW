@@ -10,11 +10,14 @@
 
 针对没有学过C++/Python、没有太多相关编程经验的新同学的C++ & Python编程入门教程。
 
+### 0. Git基础教程 [Hello Git](./HW0-Hello_Git)
+
+学习世界上最先进的版本控制工具Git，从现在开始提升工作效率。
 
 
 ### 1. C++基础练习 [Custom Vector](./HW1-Custom_Vector)
 
-实现一个简化版的std::vector
+实现一个你自己的简化版的std::vector！
 
 
 
