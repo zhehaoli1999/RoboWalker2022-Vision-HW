@@ -30,9 +30,11 @@
 
 
 
-### 3. 神经网络相关 To be released...
+### 3. 神经网络现代图像识别算法练习：[YOLOv5 PowerRune Detector](./HW3-Neural_Network_PowerRune_Detector/)（待发布）
 
+使用python实现一个基于YOLOv5算法的能量机关识别器，并进行准确率调优比赛。
 
+### 4. 卡尔曼滤波控制基础：[Kalman PowerRune Tracker](./HW4-Kalman_PowerRune_Tracker/)（待发布）
 
-### 4. 卡尔曼滤波相关 To be released...
+基于作业3，实现一个基于卡尔曼滤波算法的能量机关预测与跟踪模块。
 
