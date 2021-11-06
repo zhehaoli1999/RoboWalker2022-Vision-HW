@@ -65,11 +65,25 @@ Git是目前世界上使用最为广泛的代码版本控制工具。
 
 ### <span id="jump3">3. 在实践中学习Git</span>
 
-为了让大家轻松上手Git，我们将使用VSCode在实践中学习Git。
+为了让大家轻松上手Git，我们将使用VSCode在实践中学习Git。Vscode中已经内置了Git功能。
+
+![](./imgs/5.png)
 
 #### <span id="jump31">3.1 初始化一个Git仓库</span>
 
-首先，我们需要
+首先，我们需要创建一个Git仓库。
+
+![](./imgs/6.png)
+
+创建完毕后，界面如下：
+
+![](imgs/7.png)
+
+该文件夹下的Git仓库已经创建好了。
+
+在命令行中，对应的指令是``git init``
+
+
 
 ####  <span id="jump32">3.2 暂存与提交文件</span>
 
@@ -89,17 +103,3 @@ Git是目前世界上使用最为广泛的代码版本控制工具。
 
 1. [廖雪峰的中文Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 2. [Git官方教程](https://git-scm.com/book/zh/v2/)
-
-
-
-// Vscode + 命令行git使用实例
-// git add 
-// git commit
-// git status  
-// git history
-// git rm 
-// git push & pull & clone 
-// vscode git 插件推荐
-// 相关学习资源
-
-## 目标
