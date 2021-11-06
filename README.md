@@ -22,7 +22,7 @@
 
 ### 2. CMake基础教程 [Hello CMake](./HW2-Hello_CMake)
 
-学习跨平台的现代C++工程构建构建CMake。
+学习跨平台的现代C++工程构建工具CMake。
 
 ### 2. OpenCV传统数字图像处理算法练习：[Simplified PowerRune Detector](./HW2-Simplified_PowerRune_Detector)
 
