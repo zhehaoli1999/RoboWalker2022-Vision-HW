@@ -77,7 +77,7 @@ Git通过使用数据库记录文件快照（对当前的文件“拍照”）�
 
 1. [（英文官方文档）Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
-#### <span id="jump31">3.1 初始化一个Git仓库</span>
+### <span id="jump31">3.1 初始化一个Git仓库</span>
 
 首先，我们需要创建一个Git仓库。Git仓库是一个保存了文件修改等信息的数据库。
 
@@ -94,7 +94,7 @@ Git通过使用数据库记录文件快照（对当前的文件“拍照”）�
 在命令行中，对应的指令是``git init``。
 
 
-####  <span id="jump32">3.2 暂存与提交文件</span>
+###  <span id="jump32">3.2 暂存与提交文件</span>
 
 在你的``git_test``文件夹下新建``main.cpp``，内容如下：
 ```c++
@@ -133,7 +133,7 @@ int main(){
 
 **推荐的阅读材料**
 1. [工作区与暂存区](https://www.liaoxuefeng.com/wiki/896043488029600/897271968352576)
-####  <span id="jump33">3.3 回退到上一次提交</span>
+###  <span id="jump33">3.3 回退到上一次提交</span>
 
 修改``main.cpp``，加入新的一行如下：
 ```c++
@@ -189,12 +189,12 @@ VSCode会用绿色的边框标识出增加的部分。（蓝色标识修改的�
 1. 可以自行Google搜索更多的git命令、探索vscode的功能。如
    ![](imgs/23.png)
 
-####  <span id="jump34">3.4 使用.gitignore忽略不需要的文件</span>
+###  <span id="jump34">3.4 使用.gitignore忽略不需要的文件</span>
 
 当我们不希望某些文件被git记录时，可以在git仓库所在目录（在.git外，与.git同级）下新建一个``.gitignore``文件，在其中加入我们想忽略的文件后缀与文件夹。
 
 
-####  <span id="jump35">3.5 从远端代码仓库(Github、Gitee)上拷贝代码</span>
+###  <span id="jump35">3.5 从远端代码仓库(Github、Gitee)上拷贝代码</span>
 
 我们可以使用``git clone``功能去克隆公共代码仓库的代码。
 
@@ -210,7 +210,7 @@ VSCode会用绿色的边框标识出增加的部分。（蓝色标识修改的�
 
 ![](./imgs/30.png)
 
-####  <span id="jump36">3.6 什么是分支</span>
+### <span id="jump36">3.6 什么是分支</span>
 
 分支是Git中的关键概念。 它可以形象地看成树的枝干。
 
@@ -247,7 +247,7 @@ Git的默认分支是main（老版本是master）
 
 **小练习**
 
- 1.你能否跟着上面讲的流程，创建合适的分支和提交，实现和上图Git graph呈现的历史图一样的结果（commit信息不要求一样）？
+ > 1.你能否跟着上面讲的流程，创建合适的分支和提交，实现和上图Git graph呈现的历史图一样的结果（commit信息不要求一样）？
 
 不同的分支可以用于完成不同的功能。因此分支可以用于多人协作，每个人在自己的分支上工作，最后合并分支。
 
@@ -257,7 +257,8 @@ Git的默认分支是main（老版本是master）
 1. （非常好的资源👍最好看一下）[交互式学习Git分支](https://learngitbranching.js.org/
 )
 
-####  <span id="jump37">3.7 如何合作 & 什么是pull request</span>
+
+###  <span id="jump37">3.7 如何合作 & 什么是pull request</span>
 
 一个项目的常见的基于分支的合作方式：
 
