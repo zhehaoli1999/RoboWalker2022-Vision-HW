@@ -29,10 +29,11 @@
 实现一个简化版的能量机关识别模块，作业用的输入数据图片来自于2021南部赛区步兵单项赛的录制结果。
 
 
-
+---
+### 进阶练习
 ### 3. 神经网络现代图像识别算法练习：[YOLOv5 PowerRune Detector](./HW3-Neural_Network_PowerRune_Detector/)（待发布）
 
-使用python实现一个基于YOLOv5算法的能量机关识别器，并进行准确率调优比赛。
+使用python实现一个基于YOLOv5网络的能量机关识别器，并进行准确率调优比赛。
 
 ### 4. 卡尔曼滤波控制基础：[Kalman PowerRune Tracker](./HW4-Kalman_PowerRune_Tracker/)（待发布）
 
