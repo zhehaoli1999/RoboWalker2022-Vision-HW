@@ -210,6 +210,12 @@ VSCode会用绿色的边框标识出增加的部分。（蓝色标识修改的�
 
 ![](./imgs/30.png)
 
+TODO：更新git pull
+
+**推荐的阅读材料**
+
+1. 
+
 ### <span id="jump36">3.6 什么是分支</span>
 
 分支是Git中的关键概念。 它可以形象地看成树的枝干。
@@ -253,10 +259,14 @@ Git的默认分支是main（老版本是master）
 
 ![](imgs/28.png)
 
+TODO 更新git merge
+
+TODO 更新 git stash
+
 **推荐的阅读材料**
 1. （非常好的资源👍最好看一下）[交互式学习Git分支](https://learngitbranching.js.org/
 )
-
+2. （非常有用！！！）自行搜索了解Git stash
 
 ###  <span id="jump37">3.7 如何合作 & 什么是pull request</span>
 
